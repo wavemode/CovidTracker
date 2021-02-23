@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Covid Tracker</title>
+
+</head>
+
+<body>
+
+
+
+<p th:text="${cases}"> </p>
+
+
+    <table class="table">
+        <tr>
+            <th>State</th>
+            <th>County</th>
+            <th>Cases</th>
+        </tr>
+        <tr th:each="location : ${Stats}">
+            <td th:text="${location.state}"></td>
+            <td th:text="${location.county}"></td>
+            <td th:text="${location.cases}">0</td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>
