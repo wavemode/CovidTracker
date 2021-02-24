@@ -17,9 +17,9 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
-        List<Location> locations = coronaVirusDataService.getLocations();
+        List<Location> locations = coronaVirusDataService.getStats();
 
-        model.addAttribute("location", locations);
+        model.addAttribute("test", locations);
 
         return "home";
     }

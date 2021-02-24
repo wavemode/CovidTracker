@@ -22,10 +22,10 @@ public class coronavirusdataservice {
     private static String VIRUS_DATA_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/live/us-counties.csv";
 
     // create a list of class location
-    private List<Location> locations = new ArrayList<>();
+    private List<Location> stats = new ArrayList<>();
 
-    public List<Location> getLocations() {
-        return locations;
+    public List<Location> getStats() {
+        return stats;
     }
 
     @PostConstruct
@@ -53,12 +53,12 @@ public class coronavirusdataservice {
             location.setState(record.get("state"));
             location.setCounty(record.get("county"));
             location.setCases(Integer.parseInt(record.get("cases")));
-            System.out.println(location);
+            //System.out.println(location);
             newLocation.add(location);
         }
 
         // this is to avoid concurrency problems
-        this.locations = newLocation;
+        this.stats = newLocation;
     }
 
 }
