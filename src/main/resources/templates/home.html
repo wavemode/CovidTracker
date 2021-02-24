@@ -20,7 +20,7 @@
             <th>County</th>
             <th>Cases</th>
         </tr>
-        <tr th:each="location : ${Stats}">
+        <tr th:each="location : ${locations}">
             <td th:text="${location.state}"></td>
             <td th:text="${location.county}"></td>
             <td th:text="${location.cases}">0</td>

@@ -53,7 +53,7 @@ public class coronavirusdataservice {
             location.setState(record.get("state"));
             location.setCounty(record.get("county"));
             location.setCases(Integer.parseInt(record.get("cases")));
-            //System.out.println(location);
+            System.out.println(location);
             newLocation.add(location);
         }
 

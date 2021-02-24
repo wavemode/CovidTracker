@@ -29,9 +29,9 @@ public class Location {
 
     @Override
     public String toString() {
-        return "LocationStats{" +
+        return "Location{" +
                 "state='" + state + '\'' +
-                ", country='" + county + '\'' +
+                ", county='" + county + '\'' +
                 ", cases=" + cases +
                 '}';
     }
