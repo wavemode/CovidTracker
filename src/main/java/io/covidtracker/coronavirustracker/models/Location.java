@@ -27,6 +27,8 @@ public class Location {
 
     public void setCases(int cases) { this.cases = cases; }
 
+
+
     @Override
     public String toString() {
         return "Location{" +
