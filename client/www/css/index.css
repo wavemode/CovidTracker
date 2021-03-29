@@ -1,21 +1,3 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -24,87 +6,187 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%);
-    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
-    font-size:12px;
+    font-size:4vw;
     height:100vh;
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     /* Padding to avoid the "unsafe" areas behind notches in the screen */
-    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
-    text-transform:uppercase;
+    padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
     width:100%;
+    height: 100%;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+
 }
 
-/* Portrait layout (default) */
+
+/* hide app while vue is still compiling */
+[v-cloak] {
+    visibility: hidden !important;
+}
+
+.vue-app-content {
+    display: none;
+}
+
+.vue-app-content.active {
+    display: block;
+}
+
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+    width: 100%;
+    height: 100%;
+    
+    background: rgb(250, 250, 250);
 }
 
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
+.mdl-layout__header, .mdl-layout__drawer, .mdl-layout__obfuscator {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
+.mdl-layout__title {
+    font-weight: 300;
 }
 
-.event {
-    border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
+.mdl-layout__content {
+    width: 100%;
+    overflow: visible;
+
+    padding-top: 12vw;
+
+    color: rgb(117, 117, 117);
 }
 
-.event.listening {
-    background-color:#333333;
-    display:block;
+.county {
+    padding-top: 8vw;
+    text-align: center;
 }
 
-.event.received {
-    background-color:#4B946A;
-    display:none;
+.county__name {
+    display: inline-block;
+    overflow: visible;
+
+    font-size: 5.4vw;
+    font-weight: 300;
 }
 
-#deviceready.ready .event.listening { display: none; }
-#deviceready.ready .event.received { display: block; }
-
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
+.county__name__state {
+    font-size: 2.4vw;
+    font-weight: 400;
 }
 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+.county__underline {
+    margin-top: 2vw;
+
+    width: 100%;
+    height: 1px;
+    background: rgb(117, 117, 117);
 }
 
+.county__status {
+    position: relative;
+    top: 8vw;
 
-@media screen and (prefers-color-scheme: dark) {
-    body {
-        background-image:linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
-    }
+    color: white;
+}
+
+.county__status.red {
+    background: rgb(233, 30, 99);
+}
+.county__status.yellow {
+    background: rgb(255, 160, 0);
+}
+.county__status.green {
+    background: rgb(56, 142, 60);
+}
+
+.stats {
+    padding: 12vw;
+}
+
+.stat__name {
+    display: inline-block;
+    overflow: visible;
+
+    margin: 5vw;
+
+    font-size: 4.8vw;
+    font-weight: 300;
+
+}
+
+.stat__name__small {
+    font-size: 2.4vw;
+    font-weight: 4004
+}
+
+.stat__underline {
+    margin-top: 3.8vw;
+
+    width: 25vw;
+    height: 1px;
+    background: rgb(117, 117, 117);
+}
+
+.stat__value {
+    display: inline-block;
+    margin-top: 3.8vw;
+
+    font-weight: 500;
+}
+
+#map {
+    height: 80vw;
+    background: #333;
+}
+
+#vue-app-content-location-search {
+    padding: 10vw;
+}
+
+.location-search-form {
+    position: relative;
+    text-align: center;
+}
+
+.location-search-form .mdl-textfield__label {
+    overflow: visible;
+}
+
+.location-search-form__icon {
+    position: absolute;
+    left: -5vw;
+    font-size: 4.5vw;
+}
+
+.contacts-list {
+    margin: 15vw auto;
+}
+
+.contacts-list td {
+    opacity: 0.6;
+}
+
+.contacts-list .mdl-data-table__cell--non-numeric {
+    opacity: 1;
+}
+
+.contact-list-new-button {
+    position: fixed;
+
+    bottom: 8vw;
+    right: 8vw;
+}
+
+#vue-app-content-new-contact {
+    padding: 14vw 0;
+}
+
+.new-contact-form {
+    text-align: center;
+}
+
+.new-contact-form__button {
+    margin-top: 10vw;
 }
