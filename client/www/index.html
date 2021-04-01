@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'self'; style-src * 'self' 'unsafe-inline'; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; img-src * data: 'self' 'unsafe-inline'; connect-src * 'self' 'unsafe-inline'; frame-src * 'self';">
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">   -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="css/material.blue_grey-indigo.min.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>CovidTracker</title>
+    </head>
+    <body>
+        <div v-cloak id="app" class="app mdl-layout--fixed-header mdl-js-layout">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout-icon"></div>
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout__title">{{ title }}</span>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout__title"></span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#" v-on:click="navigate('home', $event)">Home</a>
+                    <a class="mdl-navigation__link" href="#" v-on:click="navigate('location-search', $event)">Location Search</a>
+                    <a class="mdl-navigation__link" href="#" v-on:click="navigate('contacts', $event)">Contacts</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+                <div id="vue-app-content-home" class="vue-app-content" v-bind:class="{ active: activePage === 'home' }">
+                    <div class="county">
+                        <span class="county__name">{{ county.name }}, <span class="county__name__state">{{ county.state }}</span>
+                            <br>
+                            <div class="county__underline"></div>
+                        </span>
+                        <br>
+                        <span v-bind:class="county.statusClass" class="county__status mdl-chip">
+                            <span v-html="warningText(county.statusClass)" class="mdl-chip__text"></span>
+                        </span>
+                    </div>
+                    <div class="stats">
+                        <span class="stat__name">Daily Cases
+                            <br>
+                            <div class="stat__underline"></div>
+                            <span class="stat__value">{{ commaNumber(dailyCases) }}</span>
+                        </span>
+                        <span class="stat__name">Deaths
+                            <br>
+                            <div class="stat__underline"></div>
+                            <span class="stat__value">{{ commaNumber(deaths) }}</span>
+                        </span>
+                        <span class="stat__name">Total Cases
+                            <br>
+                            <div class="stat__underline"></div>
+                            <span class="stat__value">{{ commaNumber(totalCases) }}</span>
+                        </span>
+                        <span class="stat__name">Recovered
+                            <br>
+                            <div class="stat__underline"></div>
+                            <span class="stat__value">{{ commaNumber(recovered) }}</span>
+                        </span>
+                    </div>
+                    <div id="map"></div>
+                </div>
+                
+                <div id="vue-app-content-location-search" class="vue-app-content" v-bind:class="{ active: activePage === 'location-search' }">
+
+                    <form class="location-search-form" action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input v-on:input="locationSearchInput" class="mdl-textfield__input" type="text" id="location-search-form__county-name">
+                            <label class="mdl-textfield__label" for="location-search-form__county-name"><span class="location-search-form__icon material-icons-outlined">search</span> County name...</label>
+                        </div>
+                    </form>
+
+                    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                        <tbody>
+                            <tr v-for="(county, index) in locationSearchCounties" v-on:click="loadStats">
+                                <td class="mdl-data-table__cell--non-numeric search-result-name">{{ county.name }}</td>
+                                <td>{{ county.state }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                      
+                </div>
+
+                <div id="vue-app-content-new-contact" class="vue-app-content" v-bind:class="{ active: activePage === 'new-contact' }">
+
+                    <form class="new-contact-form" action="#" v-on.prevent="submitContact">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" id="sample1">
+                            <label class="mdl-textfield__label" for="sample1">Name</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="[\-0-9]*" id="sample2">
+                            <label class="mdl-textfield__label" for="sample2">Phone Number</label>
+                            <span class="mdl-textfield__error">Enter a valid phone number</span>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" id="sample1">
+                            <label class="mdl-textfield__label" for="sample1">Date</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" id="sample1">
+                            <label class="mdl-textfield__label" for="sample1">Time</label>
+                        </div>
+                        <br>
+                        <button class="new-contact-form__button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                            Submit
+                        </button>
+
+                    </form>
+
+
+                </div>
+                
+                
+                <div id="vue-app-content-contacts" class="vue-app-content" v-bind:class="{ active: activePage === 'contacts' }">
+
+                    <table class="contacts-list mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                        <thead>
+                            <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Name</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Chukwudi Okechukwu</td>
+                                <td>2021-03-06</td>
+                                <td>8:06 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"><i>&lt;anonymous&gt;</i></td>
+                                <td>2021-03-06</td>
+                                <td>7:15 a.m.</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Chukwudi Okechukwu</td>
+                                <td>2021-03-05</td>
+                                <td>5:45 p.m.</td>
+                            </tr>
+                        </tbody>
+                    </table>                      
+
+                    <button v-on:click="navigate('new-contact')" class="contact-list-new-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                        <i class="material-icons">add</i>
+                    </button>
+
+                </div>
+
+                <div id="vue-app-content-settings" class="vue-app-content" v-bind:class="{ active: activePage === 'settings' }">Settings</div>
+            </main>
+        </div>
+        <script src="cordova.js"></script>
+        <script src="js/material.min.js"></script>
+        <script src="js/vue.js"></script>
+        <script src="js/index.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb6C9VWYpxSTrG3y82lnhsdFCovwwFyDE&callback=initMap"></script>
+    </body>
+</html>
