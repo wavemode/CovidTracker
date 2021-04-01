@@ -7,6 +7,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import util.Http;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -38,11 +39,8 @@ public class CountyService {
         List<CountyData> newCountyData = new ArrayList<>();
         List<StateData> newStateData = new ArrayList<>();
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(VIRUS_DATA_URI))
-                .build();
-        HttpResponse<String> httpResponse = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> httpResponse = CountyDataRequestor.getCountyData();
+
         //System.out.println(httpResponse.body());
         // create a reader for the csv file
         StringReader csvReader = new StringReader(httpResponse.body());
