@@ -8,10 +8,9 @@ import javax.persistence.*;
 
 public class CountyData {
     @Id
-    @Column(nullable = false)
     private String county;
     private int cases;
-    private String deaths;
+    private int deaths;
 
     @ManyToOne
     private StateData stateData;
@@ -24,7 +23,7 @@ public class CountyData {
         this.stateData = stateData;
     }
 
-    public CountyData(String county, int cases, String deaths) {
+    public CountyData(String county, int cases, int deaths) {
         this.county = county;
         this.cases = cases;
         this.deaths = deaths;
@@ -49,11 +48,11 @@ public class CountyData {
         this.cases = cases;
     }
 
-    public String getDeaths() {
+    public int getDeaths() {
         return deaths;
     }
 
-    public void setDeaths(String deaths) {
+    public void setDeaths(int deaths) {
         this.deaths = deaths;
     }
 

@@ -47,13 +47,11 @@
             <th>State</th>
             <th>County</th>
             <th>Cases</th>
-            <th>Deaths</th>
         </tr>
-        <tr th:each="data : ${countyData}">
-            <td th:text="${data.getStateData().state}"></td>
-            <td th:text="${data.county}"></td>
-            <td th:text="${data.cases}"></td>
-            <td th:text="${data.deaths}"></td>
+        <tr th:each="stateData : ${stateData}">
+            <td th:text="${stateData.state}"></td>
+            <td th:text="${stateData.county}"></td>
+            <td th:text="${stateData.cases}"></td>
         </tr>
     </table>
 </div>
