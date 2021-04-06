@@ -1,4 +1,4 @@
 twilio:
-  account: jfbfbskfbskfbskfbskf //get it later
-    authentication: skbfskfbskfbsk // get it later
-      number: 06951340289 // get it later
+  account:
+    authentication:
+      number: 

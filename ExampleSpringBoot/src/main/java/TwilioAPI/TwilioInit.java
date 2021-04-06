@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 
 // initialize the application
+// start the twilio connection
 public class TwilioInit {
     private final static Logger LOGGER = LoggerFactory.getLogger(TwilioInit.class);
 

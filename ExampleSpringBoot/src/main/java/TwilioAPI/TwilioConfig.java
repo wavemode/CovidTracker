@@ -5,12 +5,13 @@ import org.springframework.context.annotation.Configuration;
 
 
 // create the bean
+// create the account at twilio and the trial number needed for communication
 @Configuration
 @ConfigurationProperties("twilio")
 public class TwilioConfig {
     private String account;
     private String authentication;
-    private String number;
+    private String trialNumber;
 
     public TwilioConfig() {
     }
@@ -31,12 +32,12 @@ public class TwilioConfig {
         this.authentication = authentication;
     }
 
-    public String getNumber() {
-        return number;
+    public String getTrialNumber() {
+        return trialNumber;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setTrialNumber(String trialNumber) {
+        this.trialNumber = trialNumber;
     }
 
     @Override
@@ -44,7 +45,7 @@ public class TwilioConfig {
         return "TwilioConfig{" +
                 "account='" + account + '\'' +
                 ", authentication='" + authentication + '\'' +
-                ", number='" + number + '\'' +
+                ", number='" + trialNumber + '\'' +
                 '}';
     }
 }
