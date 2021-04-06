@@ -1,23 +1,15 @@
-package CSC4410.CovidTracker;
+package com.example.CovidTracker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-// enable scheduling from the CoronaVirusData
 @EnableScheduling
-
-public class CovidTrackerApplication {
-
-
+public class ExampleSpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CovidTrackerApplication.class, args);
-
-
-
+		SpringApplication.run(ExampleSpringBootApplication.class, args);
 	}
-
 
 }

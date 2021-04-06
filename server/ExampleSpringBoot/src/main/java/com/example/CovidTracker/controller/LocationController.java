@@ -1,6 +1,8 @@
-package CSC4410.CovidTracker.counties;
+package com.example.CovidTracker.controller;
 
-import CSC4410.CovidTracker.DataCollector;
+
+import com.example.CovidTracker.DataConnector;
+import com.example.CovidTracker.model.Location;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,16 +12,16 @@ import java.util.List;
 
 @Controller
 
-public class CountyController {
+public class LocationController {
     @Autowired
-    DataCollector dataCollector;
+    DataConnector dataConnector;
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home(Model model) {
-        List<CountyData> countyData = dataCollector.getLocations();
+        List<Location> countyData = dataConnector.getLocations();
         int totalcases = countyData.stream().mapToInt(stat -> stat.getCases()).sum();
 
-        model.addAttribute("countyData", countyData);
+        model.addAttribute("locations", countyData);
         model.addAttribute("totalcases", totalcases);
         return "home";
     }

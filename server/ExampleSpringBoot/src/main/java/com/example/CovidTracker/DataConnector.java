@@ -1,8 +1,9 @@
-package CSC4410.CovidTracker;
+package com.example.CovidTracker;
 
-import models.Location;
+import com.example.CovidTracker.model.Location;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -17,14 +18,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CoronaVirusData {
-    private static String VIRUS_DATA_URI = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv";
+public class DataConnector {
+    private static String VIRUS_DATA_URI = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/live/us-counties.csv";
     // create a list of class location
     private List<Location> locations = new ArrayList<>();
-
+    @Autowired
+    com.example.CovidTracker.virusRepository virusRepository;
 
     @PostConstruct
-// execute the function every second to update data
+// execute the function every day to update data
     @Scheduled(cron = "* * * 1 * *")
     public void fetchVirusData() throws IOException, InterruptedException {
 
@@ -34,18 +36,18 @@ public class CoronaVirusData {
                 .uri(URI.create(VIRUS_DATA_URI))
                 .build();
         HttpResponse<String> httpResponse = client.send(request, HttpResponse.BodyHandlers.ofString());
-        //System.out.println(httpResponse.body());
-        // create a reader for the csv file
+
         StringReader csvReader = new StringReader(httpResponse.body());
-// loop through to get header values
-        // get column for each record
+
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(csvReader);
         for (CSVRecord record : records) {
             Location location = new Location();
             location.setState(record.get("state"));
             location.setCounty(record.get("county"));
-            // parse the column case from data to integer value
+            location.setDeaths(record.get("deaths"));
             location.setCases(Integer.parseInt(record.get("cases")));
+            // use repository to store all data in the database
+            virusRepository.save(location);
             System.out.println(location.toString());
             newLocation.add(location);
 

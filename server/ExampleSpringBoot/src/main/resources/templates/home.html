@@ -49,8 +49,8 @@
             <th>Cases</th>
             <th>Deaths</th>
         </tr>
-        <tr th:each="data : ${countyData}">
-            <td th:text="${data.getStateData().state}"></td>
+        <tr th:each="data : ${locations}">
+            <td th:text="${data.state}"></td>
             <td th:text="${data.county}"></td>
             <td th:text="${data.cases}"></td>
             <td th:text="${data.deaths}"></td>
