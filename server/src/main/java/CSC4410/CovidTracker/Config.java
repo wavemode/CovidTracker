@@ -1,6 +1,7 @@
 package CSC4410.CovidTracker;
 
 import CSC4410.CovidTracker.util.Filesystem;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -17,13 +18,13 @@ public class Config {
     static {
         try {
             loadConfig();
-        } catch (IOException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
             System.exit(1);
         }
     }
 
-    private static void loadConfig() throws IOException {
+    private static void loadConfig() throws IOException, JSONException {
         var content = Filesystem.readFile(configFile);
         var json = new JSONObject(content);
 
