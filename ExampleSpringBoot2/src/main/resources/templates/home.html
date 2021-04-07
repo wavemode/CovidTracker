@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Coronavirus Tracker Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body onload="startTime()">
+
+
+
+<script type="text/javascript">
+    function startTime() {
+    var today = new Date();
+
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var week = days[today.getDay()];
+    var day = today.getDate();
+    var month = months[today.getMonth()];
+    var year = today.getFullYear();
+    var date = week+", "+month+" "+day+", "+year;
+    document.getElementById("date").innerHTML = date;
+
+}
+    </script>
+
+<div class="container">
+    <h1>Coronavirus Tracker Application</h1>
+
+    <div class="jumbotron">
+        <h1 class="display-4" th:text="${totalcases}"></h1>
+        <p class="lead">Total cases reported as of today<div id="clockdate">
+        <div class="clockdate-wrapper">
+            <div id="date"></div>
+        </div>
+    </div></p>
+        <hr class="my-4">
+    </div>
+
+
+    <table class="table">
+        <tr>
+            <th>State</th>
+            <th>County</th>
+            <th>Cases</th>
+<<<<<<< Updated upstream
+        </tr>
+        <tr th:each="location : ${test}">
+            <td th:text="${location.state}"></td>
+            <td th:text="${location.county}"></td>
+            <td th:text="${location.cases}"></td>
+=======
+            <th>Deaths</th>
+        </tr>
+        <tr th:each="data : ${locations}">
+            <td th:text="${data.state}"></td>
+            <td th:text="${data.county}"></td>
+            <td th:text="${data.cases}"></td>
+            <td th:text="${data.deaths}"></td>
+>>>>>>> Stashed changes
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>
