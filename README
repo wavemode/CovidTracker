@@ -1,0 +1,1 @@
+To run please change mysql root password in src/main/resources/application.properties to your mysql password.
