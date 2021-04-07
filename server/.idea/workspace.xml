@@ -20,38 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExampleSpringBoot/CovidTracker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/server.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CovidTracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CovidTracker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/CoronaVirusData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/CovidTrackerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/CovidTrackerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyDataRequestor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/state/StateData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/state/StateData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/state/StateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/state/StateRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Location.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Http.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/CovidTrackerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/DataCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/service/DataUpdateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/controller/CountyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/counties/CountyRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/state/StateData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/state/StateRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CSC4410/CovidTracker/CovidTrackerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CSC4410/CovidTracker/CovidTrackerApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,32 +47,47 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1qoK3JAFydv3OEyN2Q8TYRW7zNx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="CovidTrackerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="groupone.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="CSC4410.CovidTracker.CovidTrackerApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="CSC4410.CovidTracker.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,7 +108,8 @@
       <updated>1617740301629</updated>
       <workItem from="1617740304077" duration="713000" />
       <workItem from="1617741038688" duration="343000" />
-      <workItem from="1617741400228" duration="144000" />
+      <workItem from="1617741400228" duration="4228000" />
+      <workItem from="1617755172637" duration="34072000" />
     </task>
     <servers />
   </component>
@@ -129,13 +129,81 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2397" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617741240926">
+    <state x="2269" y="361" key="#SQL_Dialects" timestamp="1617807767734">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2397" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617741240926" />
-    <state x="2444" y="185" key="SettingsEditor" timestamp="1617741544712">
+    <state x="2269" y="361" key="#SQL_Dialects/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617807767734" />
+    <state x="2320" y="375" key="#SQL_Resolution_Scopes" timestamp="1617809225277">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2444" y="185" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617741544712" />
+    <state x="2320" y="375" key="#SQL_Resolution_Scopes/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617809225277" />
+    <state x="2397" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617809206598">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2397" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617809206598" />
+    <state x="871" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1617825271866">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="871" y="235" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617825271866" />
+    <state x="2791" y="235" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617810012227" />
+    <state x="736" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617823534374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="736" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617823534374" />
+    <state x="2656" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617809865099" />
+    <state width="1877" height="267" key="GridCell.Tab.0.bottom" timestamp="1617828976034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617828976034" />
+    <state width="1877" height="267" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
+    <state width="1877" height="267" key="GridCell.Tab.0.center" timestamp="1617828976034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617828976034" />
+    <state width="1877" height="267" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258681" />
+    <state width="1877" height="267" key="GridCell.Tab.0.left" timestamp="1617828976034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617828976034" />
+    <state width="1877" height="267" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258681" />
+    <state width="1877" height="267" key="GridCell.Tab.0.right" timestamp="1617828976034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617828976034" />
+    <state width="1877" height="267" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
+    <state width="1877" height="267" key="GridCell.Tab.1.bottom" timestamp="1617828976034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617828976034" />
+    <state width="1877" height="267" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
+    <state width="1877" height="267" key="GridCell.Tab.1.center" timestamp="1617828976034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617828976034" />
+    <state width="1877" height="267" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
+    <state width="1877" height="267" key="GridCell.Tab.1.left" timestamp="1617828976034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617828976034" />
+    <state width="1877" height="267" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
+    <state width="1877" height="267" key="GridCell.Tab.1.right" timestamp="1617828976034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617828976034" />
+    <state width="1877" height="267" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
+    <state x="2444" y="185" key="SettingsEditor" timestamp="1617810471880">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2444" y="185" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617810471880" />
+    <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1617826574460">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="592" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617826574460" />
+    <state x="2587" y="253" width="585" height="592" key="find.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617801873091" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617826541336">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617826541336" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617804176700" />
   </component>
 </project>
