@@ -1,5 +1,7 @@
 package CSC4410.CovidTracker.model;
 
+import CSC4410.CovidTracker.operation.query.CountyCodeQuery;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -9,8 +11,13 @@ import java.sql.SQLException;
  */
 public class County {
 
+    /**
+     * Converts a ResultSet, representin a row from the database, into a
+     * County object.
+     * @throws SQLException
+     */
     public static County fromResultSet(ResultSet rs) throws SQLException {
-        int fipsCode = rs.getInt("county_fips_code");
+        int fipsCode = rs.getInt("county_fips");
         String name = rs.getString("county_name");
         String stateCode = rs.getString("county_state_code");
         int cases = rs.getInt("county_cases");
@@ -22,6 +29,15 @@ public class County {
 
         return new County(fipsCode, name, stateCode, cases, dailyCases, deaths,
                             population, latitude, longitude);
+    }
+
+    /**
+     * Retrieve a county from the database by its FIPS code.
+     */
+    public static County byCode(int fipsCode) throws SQLException {
+        var query = new CountyCodeQuery(fipsCode);
+        query.execute();
+        return query.getResult();
     }
 
     private final CountyCovidData covidData;

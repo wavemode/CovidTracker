@@ -1,12 +1,10 @@
-package CSC4410.CovidTracker.operation;
-
-import CSC4410.CovidTracker.util.Query;
+package CSC4410.CovidTracker.operation.query;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- * A database query which creates the table for covid data by county, if it
+ * A database query which creates the table for data by county, if it
  * does not already exist.
  */
 public class CountyTableCreateQuery extends Query {

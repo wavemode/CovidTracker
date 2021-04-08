@@ -1,7 +1,6 @@
-package CSC4410.CovidTracker.operation;
+package CSC4410.CovidTracker.operation.query;
 
 import CSC4410.CovidTracker.model.CountyLocation;
-import CSC4410.CovidTracker.util.Query;
 
 import java.sql.SQLException;
 

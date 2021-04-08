@@ -1,6 +1,5 @@
-package CSC4410.CovidTracker.operation;
+package CSC4410.CovidTracker.operation.request;
 
-import CSC4410.CovidTracker.model.CountyName;
 import CSC4410.CovidTracker.model.CountyPopulation;
 import CSC4410.CovidTracker.util.Csv;
 import CSC4410.CovidTracker.util.Filesystem;
@@ -36,7 +35,7 @@ public class PopulationDataRequest {
                 population = Integer.parseInt(record.get("POP_ESTIMATE_2019"));
             } catch (Exception e) {
                 // ignore parse failures
-                throw new RuntimeException(e);
+                continue;
             }
 
             populations.add(new CountyPopulation(fips, population));

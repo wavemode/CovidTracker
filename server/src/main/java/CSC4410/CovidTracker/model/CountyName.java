@@ -1,5 +1,8 @@
 package CSC4410.CovidTracker.model;
 
+/**
+ * An immutable record representing the full name and state code of a given county.
+ */
 public class CountyName {
     private final String stateCode;
     private final String name;
@@ -12,7 +15,10 @@ public class CountyName {
         this.fipsCode = fipsCode;
     }
 
-
+    /**
+     * @return The unique FIPS (Federal Information Processing Standard) code
+     * of this county.
+     */
     public int getFipsCode() {
         return fipsCode;
     }

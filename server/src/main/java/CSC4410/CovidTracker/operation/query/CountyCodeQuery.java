@@ -1,7 +1,6 @@
-package CSC4410.CovidTracker.operation;
+package CSC4410.CovidTracker.operation.query;
 
 import CSC4410.CovidTracker.model.County;
-import CSC4410.CovidTracker.util.Query;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,6 +15,9 @@ public class CountyCodeQuery extends Query {
 
     private County result = null;
 
+    /**
+     * Change the FIPS code we are searching for.
+     */
     public void setFipsCode(int fipsCode) {
         this.fipsCode = fipsCode;
     }
@@ -42,7 +44,6 @@ public class CountyCodeQuery extends Query {
 
     @Override
     public void execute() throws SQLException {
-
         PreparedStatement stmt = getStatement();
         stmt.setInt(1, fipsCode);
 

@@ -1,11 +1,14 @@
-package CSC4410.CovidTracker.operation;
+package CSC4410.CovidTracker.operation.query;
 
 import CSC4410.CovidTracker.model.CountyCovidData;
-import CSC4410.CovidTracker.util.Query;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Query which updates the Covid-19 data for a given county (cases, dailyCases,
+ * and deaths).
+ */
 public class CovidDataUpdateQuery extends Query {
 
     private CountyCovidData county;

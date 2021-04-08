@@ -1,4 +1,4 @@
-package CSC4410.CovidTracker.operation;
+package CSC4410.CovidTracker.operation.request;
 
 import CSC4410.CovidTracker.model.CountyLocation;
 import CSC4410.CovidTracker.model.CountyName;

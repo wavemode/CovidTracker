@@ -1,10 +1,5 @@
 package CSC4410.CovidTracker;
 
-import CSC4410.CovidTracker.model.CountyCovidData;
-import CSC4410.CovidTracker.model.CountyLocation;
-import CSC4410.CovidTracker.model.CountyName;
-import CSC4410.CovidTracker.model.CountyPopulation;
-import CSC4410.CovidTracker.operation.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
