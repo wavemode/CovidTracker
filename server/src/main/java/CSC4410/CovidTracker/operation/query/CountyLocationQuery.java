@@ -38,6 +38,8 @@ public class CountyLocationQuery extends Query {
                     "ABS(county_longitude - ?) " +
                     "AS distance " +
                 "FROM county_data " +
+                "WHERE county_latitude IS NOT NULL " +
+                "AND county_longitude IS NOT NULL " +
                 "ORDER BY distance ASC " +
                 "LIMIT 1";
     }

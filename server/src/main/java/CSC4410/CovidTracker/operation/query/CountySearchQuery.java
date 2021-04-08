@@ -37,11 +37,12 @@ public class CountySearchQuery extends Query {
 
     @Override
     protected String getStatementBody() {
-        return "SELECT *," +
-                "   LOWER(county_name) as lower_county_name," +
-                "   LOWER(county_state_code) as lower_state_code" +
+        return "SELECT *, " +
+                "   LOWER(county_name) AS lower_name, " +
+                "   LOWER(county_state_code) AS lower_state_code " +
                 "FROM county_data " +
-                "WHERE lower_county_name LIKE ?" +
-                "OR lower_state_code LIKE ?";
+                "HAVING lower_name LIKE ? " +
+                "OR lower_state_code LIKE ? " +
+                "LIMIT 10 ";
     }
 }
