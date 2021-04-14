@@ -38,6 +38,8 @@ CSC4410/CovidTracker/TwilioAPI/SmsService.java
  CSC4410.CovidTracker.TwilioAPI.SmsService
 CSC4410/CovidTracker/util/Csv.java
  CSC4410.CovidTracker.util.Csv
+CSC4410/CovidTracker/view/CountyView.java
+ CSC4410.CovidTracker.view.CountyView
 CSC4410/CovidTracker/Application.java
  CSC4410.CovidTracker.Application
 CSC4410/CovidTracker/TwilioAPI/TwilioNumberRequest.java

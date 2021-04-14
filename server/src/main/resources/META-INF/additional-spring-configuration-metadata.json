@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "twilio.trial_number",
+      "type": "java.lang.String",
+      "description": "Description for twilio.trial_number."
+    },
+    {
+      "name": "twilio.authentication",
+      "type": "java.lang.String",
+      "description": "Description for twilio.authentication."
+    },
+    {
+      "name": "twilio.account",
+      "type": "java.lang.String",
+      "description": "Description for twilio.account."
+    }
+  ] }

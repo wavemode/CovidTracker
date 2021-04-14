@@ -23,6 +23,8 @@ dependencies {
     compile 'mysql:mysql-connector-java'
     compile 'org.json:json:20090211'
 
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 

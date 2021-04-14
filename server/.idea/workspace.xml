@@ -20,10 +20,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../CovidTracker/src/main/java/CSC4410/CovidTracker/counties/CountyView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/CovidTracker.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/TwilioAPI/SmsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/TwilioAPI/TwilioConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/TwilioAPI/TwilioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/TwilioAPI/TwilioInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/TwilioAPI/TwilioReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/TwilioAPI/TwilioSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/API/RestApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/DataConnector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/ExampleSpringBootApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/LocationController/LocationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/LocationModel/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/LocationRestApi/RestApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/LocationService/DataConnector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/LocationService/virusRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/TwilioAPI/SenderInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/TwilioAPI/SmsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/TwilioAPI/TwilioConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/TwilioAPI/TwilioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/TwilioAPI/TwilioInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/TwilioAPI/TwilioNumberRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/TwilioAPI/TwilioSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/controller/LocationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/model/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/java/com/example/CovidTracker/virusRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/src/test/java/com/example/CovidTracker/ExampleSpringBootApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/TwilioAPI/SmsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/TwilioAPI/TwilioConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/TwilioAPI/TwilioController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/TwilioAPI/TwilioInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/TwilioAPI/TwilioReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/TwilioAPI/TwilioSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/API/RestApiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/DataConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/ExampleSpringBootApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/LocationController/LocationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/LocationModel/Location.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/LocationRestApi/RestApiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/LocationService/DataConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/LocationService/virusRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/TwilioAPI/SenderInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/TwilioAPI/SmsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/TwilioAPI/TwilioConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/TwilioAPI/TwilioController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/TwilioAPI/TwilioInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/TwilioAPI/TwilioNumberRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/TwilioAPI/TwilioSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/controller/LocationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/model/Location.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/com/example/CovidTracker/virusRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/classes/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleSpringBoot/target/test-classes/com/example/CovidTracker/ExampleSpringBootApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../metrics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/controller/CountyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/controller/LocationSearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/query/CountyLocationQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/query/CountyLocationQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/query/CountySearchQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/query/CountySearchQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/CovidTracker.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/src/main/java/com/example/CovidTracker/API/RestApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/src/main/java/com/example/CovidTracker/DataConnector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/src/main/java/com/example/CovidTracker/ExampleSpringBootApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/src/main/java/com/example/CovidTracker/controller/LocationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/src/main/java/com/example/CovidTracker/model/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/src/main/java/com/example/CovidTracker/virusRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleSpringBoot/src/test/java/com/example/CovidTracker/ExampleSpringBootApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/TwilioAPI/SenderInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/SenderInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/TwilioAPI/SmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/SmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/TwilioAPI/TwilioConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/TwilioAPI/TwilioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/TwilioAPI/TwilioInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/TwilioAPI/TwilioNumberRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioNumberRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/TwilioAPI/TwilioSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +155,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RunManager" selected="Spring Boot.CovidTrackerApplication">
@@ -141,6 +225,7 @@
       <workItem from="1617741400228" duration="4228000" />
       <workItem from="1617755172637" duration="34072000" />
       <workItem from="1617830119382" duration="17492000" />
+      <workItem from="1618430963657" duration="1039000" />
     </task>
     <servers />
   </component>
@@ -177,6 +262,10 @@
     </state>
     <state x="871" y="235" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617825271866" />
     <state x="2791" y="235" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617810012227" />
+    <state x="2267" y="439" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618431994374">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2267" y="439" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1618431994374" />
     <state x="736" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617823534374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -226,11 +315,15 @@
     </state>
     <state width="1877" height="305" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889934228" />
     <state width="1877" height="267" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
-    <state x="524" y="185" key="SettingsEditor" timestamp="1617838549522">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2444" y="185" key="SettingsEditor" timestamp="1618431291526">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="524" y="185" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617838549522" />
-    <state x="2444" y="185" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617810471880" />
+    <state x="2444" y="185" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1618431291526" />
+    <state x="2522" y="293" key="chooseDestDirectoryDialog" timestamp="1618431875335">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2522" y="293" key="chooseDestDirectoryDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1618431875335" />
     <state x="1948" y="15" width="727" height="1030" key="dock-window-1" timestamp="1617841331881">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
