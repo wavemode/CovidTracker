@@ -1,0 +1,7 @@
+{
+  "mysqlHost": "",
+  "mysqlPort": -1,
+  "mysqlDatabase": "",
+  "mysqlUser": "",
+  "mysqlPassword": ""
+}

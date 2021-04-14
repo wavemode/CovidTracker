@@ -1,3 +1,4 @@
 .gradle
-build
+build/
 target/
+config.json
