@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,6 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules/server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../node.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/service/DataUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/service/DataUpdateService.java" afterDir="false" />
     </list>
@@ -62,7 +72,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -71,7 +81,25 @@
     <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="Spring Boot.CovidTrackerApplication">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\moham\CovidTracker\server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.Application" />
+      <module name="groupone.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CovidTrackerApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -88,7 +116,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="CovidTrackerApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -115,11 +145,13 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="Gradle.CovidTrackerApplicationTests" />
         <item itemvalue="JUnit.CovidTrackerApplicationTests" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringBeansView">
     <option name="beanDetailsProportion" value="0.3" />
   </component>
@@ -156,101 +188,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2269" y="361" key="#SQL_Dialects" timestamp="1617807767734">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2269" y="361" key="#SQL_Dialects/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617807767734" />
-    <state x="2320" y="375" key="#SQL_Resolution_Scopes" timestamp="1617809225277">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2320" y="375" key="#SQL_Resolution_Scopes/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617809225277" />
-    <state x="2397" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617809206598">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2397" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617809206598" />
-    <state x="871" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1617825271866">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="871" y="235" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617825271866" />
-    <state x="2791" y="235" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617810012227" />
-    <state x="2267" y="439" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618431994374">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2267" y="439" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1618431994374" />
-    <state x="736" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617823534374">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="736" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617823534374" />
-    <state x="2656" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617809865099" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617838900944">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617838900944" />
-    <state width="1877" height="305" key="GridCell.Tab.0.bottom" timestamp="1617889934228">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="305" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889934228" />
-    <state width="1877" height="267" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
-    <state width="1877" height="305" key="GridCell.Tab.0.center" timestamp="1617889934228">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="305" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889934228" />
-    <state width="1877" height="267" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258681" />
-    <state width="1877" height="305" key="GridCell.Tab.0.left" timestamp="1617889934228">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="305" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889934228" />
-    <state width="1877" height="267" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258681" />
-    <state width="1877" height="305" key="GridCell.Tab.0.right" timestamp="1617889934228">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="305" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889934228" />
-    <state width="1877" height="267" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
-    <state width="1877" height="305" key="GridCell.Tab.1.bottom" timestamp="1617889934229">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="305" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889934229" />
-    <state width="1877" height="267" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
-    <state width="1877" height="305" key="GridCell.Tab.1.center" timestamp="1617889934228">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="305" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889934228" />
-    <state width="1877" height="267" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
-    <state width="1877" height="305" key="GridCell.Tab.1.left" timestamp="1617889934228">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="305" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889934228" />
-    <state width="1877" height="267" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
-    <state width="1877" height="305" key="GridCell.Tab.1.right" timestamp="1617889934228">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="305" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889934228" />
-    <state width="1877" height="267" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617808258682" />
-    <state x="2444" y="185" key="SettingsEditor" timestamp="1618432386130">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="524" y="185" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617838549522" />
-    <state x="2444" y="185" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1618432386130" />
-    <state x="2522" y="293" key="chooseDestDirectoryDialog" timestamp="1618431875335">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2522" y="293" key="chooseDestDirectoryDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1618431875335" />
-    <state x="1948" y="15" width="727" height="1030" key="dock-window-1" timestamp="1617841331881">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1948" y="15" width="727" height="1030" key="dock-window-1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617841331881" />
-    <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1617843518841">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="253" width="585" height="592" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617843518841" />
-    <state x="2587" y="253" width="585" height="592" key="find.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617801873091" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617889489680">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617889489680" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617804176700" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/groupone$CovidTrackerApplicationTests.ic" NAME="CovidTrackerApplicationTests Coverage Results" MODIFIED="1617837069709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

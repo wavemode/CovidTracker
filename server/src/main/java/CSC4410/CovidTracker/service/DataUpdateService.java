@@ -25,6 +25,7 @@ public class DataUpdateService {
      */
     @Scheduled(fixedDelay = 1000 * 60 * 60 * 24) // run once per day
     public void fetchVirusData() throws IOException, SQLException {
+        createDataTable();
 
         insertCountyNames();
 
@@ -39,7 +40,7 @@ public class DataUpdateService {
     }
 
     // request and update covid data
-    private void updateCovidData() throws SQLException {
+    public static void updateCovidData() throws SQLException {
         var query = new CovidDataRequest();
         try {
             query.execute();
@@ -59,7 +60,7 @@ public class DataUpdateService {
     }
 
     // request and insert county locations
-    private void updateCountyLocations() throws IOException, SQLException {
+    public static void updateCountyLocations() throws IOException, SQLException {
         var getLoc = new LocationDataRequest();
         getLoc.execute();
 
@@ -73,7 +74,7 @@ public class DataUpdateService {
     }
 
     // request and insert county populations
-    private void updateCountyPopulations() throws IOException, SQLException {
+    public static void updateCountyPopulations() throws IOException, SQLException {
         var getPop = new PopulationDataRequest();
         getPop.execute();
 
@@ -87,7 +88,7 @@ public class DataUpdateService {
     }
 
     // request and insert county names
-    private void insertCountyNames() throws IOException, SQLException {
+    public static void insertCountyNames() throws IOException, SQLException {
         var getNames = new CountyNamesRequest();
         getNames.execute();
 
@@ -98,6 +99,12 @@ public class DataUpdateService {
             insertName.execute();
         }
         insertName.commit();
+    }
+    public static void createDataTable() throws SQLException {
+      var query=new CountyTableCreateQuery();
+      query.execute();
+
+
     }
 
 }

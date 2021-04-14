@@ -15,6 +15,8 @@ public class CountyCodeQuery extends Query {
 
     private County result = null;
 
+
+
     /**
      * Change the FIPS code we are searching for.
      */
