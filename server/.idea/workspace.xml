@@ -23,15 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules/server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/service/DataUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/service/DataUpdateService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +79,7 @@
       <recent name="C:\Users\moham\CovidTracker\server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JUnit.CountyCodeQueryTest">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.Application" />
       <module name="groupone.main" />
@@ -100,28 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CovidTrackerApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;CSC4410.CovidTracker.CovidTrackerApplicationTests&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CovidTrackerApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CountyCodeQueryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="groupone.test" />
       <extension name="coverage">
         <pattern>
@@ -130,8 +102,56 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
-      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.CovidTrackerApplicationTests" />
+      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.CountyCodeQueryTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountyCodeQueryTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groupone.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
+      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.CountyCodeQueryTest" />
+      <option name="METHOD_NAME" value="executeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountyCodeQueryTest.getResultsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groupone.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
+      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.CountyCodeQueryTest" />
+      <option name="METHOD_NAME" value="getResultsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountyCodeQueryTest.setFipsCodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groupone.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
+      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.CountyCodeQueryTest" />
+      <option name="METHOD_NAME" value="setFipsCodeTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,9 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CountyCodeQueryTest" />
+        <item itemvalue="JUnit.CountyCodeQueryTest.setFipsCodeTest" />
+        <item itemvalue="JUnit.CountyCodeQueryTest.executeTest" />
+        <item itemvalue="JUnit.CountyCodeQueryTest.getResultsTest" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="Gradle.CovidTrackerApplicationTests" />
-        <item itemvalue="JUnit.CovidTrackerApplicationTests" />
       </list>
     </recent_temporary>
   </component>
