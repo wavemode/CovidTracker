@@ -38,8 +38,8 @@ public class DataUpdateService {
 
     }
 
+    // request and update covid data
     private void updateCovidData() throws SQLException {
-        // request and update covid data
         var query = new CovidDataRequest();
         try {
             query.execute();
@@ -58,8 +58,8 @@ public class DataUpdateService {
         insert.commit();
     }
 
+    // request and insert county locations
     private void updateCountyLocations() throws IOException, SQLException {
-        // request and insert county locations
         var getLoc = new LocationDataRequest();
         getLoc.execute();
 
@@ -72,8 +72,8 @@ public class DataUpdateService {
         updateLoc.commit();
     }
 
+    // request and insert county populations
     private void updateCountyPopulations() throws IOException, SQLException {
-        // request and insert county populations
         var getPop = new PopulationDataRequest();
         getPop.execute();
 
@@ -86,8 +86,8 @@ public class DataUpdateService {
         updatePop.commit();
     }
 
+    // request and insert county names
     private void insertCountyNames() throws IOException, SQLException {
-        // request and insert county names
         var getNames = new CountyNamesRequest();
         getNames.execute();
 
