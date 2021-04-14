@@ -1,0 +1,6 @@
+CSC4410/CovidTracker/CountyNamesRequestTest.java
+ CSC4410.CovidTracker.CountyNamesRequestTest
+CSC4410/CovidTracker/CovidDataUpdateQueryTest.java
+ CSC4410.CovidTracker.CovidDataUpdateQueryTest
+CSC4410/CovidTracker/LocationUpdateQueryTest.java
+ CSC4410.CovidTracker.LocationUpdateQueryTest
