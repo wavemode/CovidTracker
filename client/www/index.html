@@ -90,21 +90,21 @@
 
                     <form class="new-contact-form" action="#" v-on:click.prevent="submitContact">
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="text" id="sample1">
+                            <input class="mdl-textfield__input" type="text" id="sample1" v-model="contactFormName">
                             <label class="mdl-textfield__label" for="sample1">Name</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="text" pattern="[\-0-9]*" id="sample2">
+                            <input class="mdl-textfield__input" type="text" pattern="[\-0-9]*" id="sample2" v-model="contactFormPhone">
                             <label class="mdl-textfield__label" for="sample2">Phone Number</label>
                             <span class="mdl-textfield__error">Enter a valid phone number</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="text" id="sample1">
-                            <label class="mdl-textfield__label" for="sample1">Date</label>
+                            <input class="mdl-textfield__input" type="text" id="sample3" v-model="contactFormDate">
+                            <label class="mdl-textfield__label" for="sample3">Date</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="text" id="sample1">
-                            <label class="mdl-textfield__label" for="sample1">Time</label>
+                            <input class="mdl-textfield__input" type="text" id="sample4" v-model="contactFormTime">
+                            <label class="mdl-textfield__label" for="sample4">Time</label>
                         </div>
                         <br>
                         <button class="new-contact-form__button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
@@ -126,20 +126,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Chukwudi Okechukwu</td>
-                                <td>2021-03-06</td>
-                                <td>8:06 p.m.</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric"><i>&lt;anonymous&gt;</i></td>
-                                <td>2021-03-06</td>
-                                <td>7:15 a.m.</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Chukwudi Okechukwu</td>
-                                <td>2021-03-05</td>
-                                <td>5:45 p.m.</td>
+                            <tr v-for="contact in contacts">
+                                <td class="mdl-data-table__cell--non-numeric">{{ contact.name }}</td>
+                                <td>{{ contact.date }}</td>
+                                <td>{{ contact.time }}</td>
                             </tr>
                         </tbody>
                     </table>                      

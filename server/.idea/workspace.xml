@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/www/assets/demos/welcome_card.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/www/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/www/js/index.js" afterDir="false" />
     </list>
@@ -65,7 +64,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -196,7 +195,7 @@
       <workItem from="1617755172637" duration="34072000" />
       <workItem from="1617830119382" duration="17492000" />
       <workItem from="1618430963657" duration="1409000" />
-      <workItem from="1618779885892" duration="33000" />
+      <workItem from="1618779885892" duration="752000" />
     </task>
     <servers />
   </component>
@@ -214,6 +213,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="717" y="357" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1618781700297">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="717" y="357" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1618781700297" />
+    <state x="467" y="141" key="SettingsEditor" timestamp="1618781730809">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="467" y="141" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1618781730809" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/groupone$CovidTrackerApplicationTests.ic" NAME="CovidTrackerApplicationTests Coverage Results" MODIFIED="1617837069709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -65,7 +65,14 @@ function onContentLoaded() {
             recovered: 45673,
             locationSearchCounties: [],
             activePage: 'home',
-            warningColor: 'red'
+            warningColor: 'red',
+            contacts: [
+                { name: 'Chukwudi Okechukwu', phone: '123456789', date: '', time: '' }
+            ],
+            contactFormName: '',
+            contactFormPhone: '',
+            contactFormDate: '',
+            contactFormTime: '',
         },
         methods: {
             commaNumber: function(num) {
@@ -94,6 +101,19 @@ function onContentLoaded() {
                 var elem = document.querySelector('.mdl-layout__obfuscator')
                 if (elem.className.indexOf('is-visible') !== -1)
                     elem.click()
+
+                if (page === 'new-contact') {
+                    let date = new Date()
+                    this.contactFormDate = date.toISOString().split('T')[0]
+                    var h = date.getHours();
+                    var m = date.getMinutes();
+                    var x = h >= 12 ? 'p.m.' : 'a.m.';
+                    h = h % 12;
+                    h = h ? h : 12;
+                    m = m < 10 ? '0'+m: m;
+                    this.contactFormTime = h + ':' + m + ' ' + x;
+
+                }
             },
             warningText() {
                 if (!this.userCounty) return ''
@@ -133,6 +153,9 @@ function onContentLoaded() {
                 this.userCounty = county
                 googleMap.setCenter({ lat: county.latitude, lng: county.longitude })
                 this.navigate('home')
+            },
+            submitContact() {
+
             }
         }
     })
