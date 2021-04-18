@@ -2,17 +2,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'self'; style-src * 'self' 'unsafe-inline'; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; img-src * data: 'self' 'unsafe-inline'; connect-src * 'self' 'unsafe-inline'; frame-src * 'self';">
-        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">   -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -40,37 +29,37 @@
                 </nav>
             </div>
             <main class="mdl-layout__content">
-                <div id="vue-app-content-home" class="vue-app-content" v-bind:class="{ active: activePage === 'home' }">
+                <div id="vue-app-content-home" class="vue-app-content" v-if="userCounty" v-bind:class="{ active: activePage === 'home' }">
                     <div class="county">
-                        <span class="county__name">{{ county.name }}, <span class="county__name__state">{{ county.state }}</span>
+                        <span class="county__name">{{ userCounty.name }}, <span class="county__name__state">{{ userCounty.stateCode }}</span>
                             <br>
                             <div class="county__underline"></div>
                         </span>
                         <br>
-                        <span v-bind:class="county.statusClass" class="county__status mdl-chip">
-                            <span v-html="warningText(county.statusClass)" class="mdl-chip__text"></span>
+                        <span v-bind:class="warningColor" class="county__status mdl-chip">
+                            <span v-html="warningText()" class="mdl-chip__text"></span>
                         </span>
                     </div>
                     <div class="stats">
                         <span class="stat__name">Daily Cases
                             <br>
                             <div class="stat__underline"></div>
-                            <span class="stat__value">{{ commaNumber(dailyCases) }}</span>
+                            <span class="stat__value">{{ commaNumber(userCounty.dailyCases) }}</span>
                         </span>
                         <span class="stat__name">Deaths
                             <br>
                             <div class="stat__underline"></div>
-                            <span class="stat__value">{{ commaNumber(deaths) }}</span>
+                            <span class="stat__value">{{ commaNumber(userCounty.deaths) }}</span>
                         </span>
                         <span class="stat__name">Total Cases
                             <br>
                             <div class="stat__underline"></div>
-                            <span class="stat__value">{{ commaNumber(totalCases) }}</span>
+                            <span class="stat__value">{{ commaNumber(userCounty.cases) }}</span>
                         </span>
-                        <span class="stat__name">Recovered
+                        <span class="stat__name">Population
                             <br>
                             <div class="stat__underline"></div>
-                            <span class="stat__value">{{ commaNumber(recovered) }}</span>
+                            <span class="stat__value">{{ commaNumber(userCounty.population) }}</span>
                         </span>
                     </div>
                     <div id="map"></div>
@@ -89,7 +78,8 @@
                         <tbody>
                             <tr v-for="(county, index) in locationSearchCounties" v-on:click="loadStats">
                                 <td class="mdl-data-table__cell--non-numeric search-result-name">{{ county.name }}</td>
-                                <td>{{ county.state }}</td>
+                                <td>{{ county.stateCode }}</td>
+                                <td class="search-result-fips" style="display: none;">{{ county.fipsCode }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -98,7 +88,7 @@
 
                 <div id="vue-app-content-new-contact" class="vue-app-content" v-bind:class="{ active: activePage === 'new-contact' }">
 
-                    <form class="new-contact-form" action="#" v-on.prevent="submitContact">
+                    <form class="new-contact-form" action="#" v-on:click.prevent="submitContact">
                         <div class="mdl-textfield mdl-js-textfield">
                             <input class="mdl-textfield__input" type="text" id="sample1">
                             <label class="mdl-textfield__label" for="sample1">Name</label>
@@ -123,9 +113,7 @@
 
                     </form>
 
-
                 </div>
-                
                 
                 <div id="vue-app-content-contacts" class="vue-app-content" v-bind:class="{ active: activePage === 'contacts' }">
 
@@ -169,6 +157,6 @@
         <script src="js/material.min.js"></script>
         <script src="js/vue.js"></script>
         <script src="js/index.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb6C9VWYpxSTrG3y82lnhsdFCovwwFyDE&callback=initMap"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb6C9VWYpxSTrG3y82lnhsdFCovwwFyDE"></script>
     </body>
 </html>

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -23,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/www/assets/demos/welcome_card.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/www/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -79,7 +78,7 @@
       <recent name="C:\Users\moham\CovidTracker\server" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PopulationDataRequestTest.executeTest">
+  <component name="RunManager" selected="Spring Boot.CovidTrackerApplication">
     <configuration name="CovidDataRequestTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="groupone.test" />
       <extension name="coverage">
@@ -197,6 +196,7 @@
       <workItem from="1617755172637" duration="34072000" />
       <workItem from="1617830119382" duration="17492000" />
       <workItem from="1618430963657" duration="1409000" />
+      <workItem from="1618779885892" duration="33000" />
     </task>
     <servers />
   </component>

@@ -1,34 +1,80 @@
+const DATA_ENDPOINT = "http://192.168.163.113:8081"
+
 // document.addEventListener('deviceready', onDeviceReady, false);
 document.addEventListener('DOMContentLoaded', onContentLoaded, false);
 
-var counties = [
-    { name: 'Cook County', state: 'IL' },
-    { name: 'Orange County', state: 'CA' },
-    { name: 'Oakland County', state: 'MI' },
-    { name: 'Wayne County', state: 'MI' },
-    { name: 'Macomb County', state: 'MI' },
-    { name: 'Washtenaw County', state: 'MI' },
-]
+/*
+    Retrieve the user's current location. Promise rejection happens if
+    no success within timeout milliseconds (default 5000).
+*/
+function getUserLocation(timeout) {
+    timeout = timeout || 5000
+    return new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject, {timeout: timeout})
+    })
+}
+
+/*
+    Retrieve the county closest to a given geographic point.
+*/
+function locationSearchRequest(latitude, longitude) {
+    return new Promise((resolve, reject) => {
+        fetch(`${DATA_ENDPOINT}/location?lat=${latitude}&long=${longitude}`).then((res) => {
+            res.json().then(resolve).catch(reject)
+        }).catch(reject)
+    })
+}
+
+/*
+    Search for counties matching a given name. Will be limited to 10 results.
+*/
+function textSearchRequest(search) {
+    return new Promise((resolve, reject) => {
+        fetch(`${DATA_ENDPOINT}/search?q=${search}`).then((res) => {
+            res.json().then(resolve).catch(reject)
+        }).catch(reject)
+    })
+}
+
+/*
+    Get the user's location and display the county at that location.
+*/
+async function initCounty() {
+    try {
+        let location = await getUserLocation()
+        let nearestCounty = await locationSearchRequest(location.coords.latitude, location.coords.longitude)
+        vueApp.userCounty = nearestCounty
+
+        initMap(location.coords.latitude, location.coords.longitude)
+
+    } catch (e) {
+        console.log(e)
+        setTimeout(initCounty, 1000)
+    } 
+}
 
 function onContentLoaded() {
     window.vueApp = new Vue({
         el: '#app',
         data: {
             title: 'Home',
-            county: {
-                name: 'Oakland County',
-                state: 'MI',
-                statusClass: 'red',
-            },
+            userCounty: null,
             dailyCases: 1014,
             deaths: 483,
             totalCases: 192321,
             recovered: 45673,
             locationSearchCounties: [],
             activePage: 'home',
+            warningColor: 'red'
         },
         methods: {
             commaNumber: function(num) {
+
+                // numebrs that are approximately zero should be reported as such
+                if (num < 1 && num > -1) {
+                    return '~0'
+                }
+
                 num = '' + num
                 var result = ''
                 var count = 0;
@@ -49,51 +95,66 @@ function onContentLoaded() {
                 if (elem.className.indexOf('is-visible') !== -1)
                     elem.click()
             },
-            warningText(statusClass) {
-                if (statusClass === 'red') {
-                    return '<strong>Severe:</strong> This area is a Covid-19 hotspot. Exercise caution.'
-                } else if (statusClass === 'yellow') {
-                    return '<strong>Moderate:</strong> This area is recovering, but still has significant infections.'
-                } else if (statusClass === 'green') {
-                    return '<strong>Mild:</strong> This area is mostly free of Covid-19.'
+            warningText() {
+                if (!this.userCounty) return ''
+
+                let dailyPer100k = this.userCounty.dailyCases / (this.userCounty.population / 100000)
+
+                if (dailyPer100k > 25) {
+                    this.warningColor = 'red'
+                    return '<strong>Severe:</strong> This area has unchecked community spread.'
+                } else if (dailyPer100k > 10) {
+                    this.warningColor = 'orange'
+                    return '<strong>Danger:</strong> This area has escalating community spread.'
+                } else if (dailyPer100k > 1) {
+                    this.warningColor = 'yellow'
+                    return '<strong>Moderate:</strong> This area has potential community spread.'
+                } else {
+                    this.warningColor = 'green'
+                    return '<strong>Mild:</strong> This area is close to containment of Covid-19.'
                 }
             },
             locationSearchInput(event) {
-                let search = event.target.value.trim().toLowerCase()
-                if (search === '')
+                let search = event.target.value.trim()
+                if (search === '') {
                     this.locationSearchCounties = []
-                else
-                    this.locationSearchCounties = counties.filter(county =>
-                        county.name.toLowerCase().indexOf(search) !== -1)
+                } else {
+                    textSearchRequest(search).then((counties) => {
+                        this.locationSearchCounties = counties
+                    }).catch(console.error)
+                }
             },
             loadStats(event) {
                 console.log(event.target)
-                let name = event.target.parentElement.querySelector('.search-result-name').innerHTML.trim()
-                let county = counties.find(county => county.name === name)
-                county.statusClass = Math.random() > 0.66 ? 'green' : Math.random() > 0.33 ? 'yellow' : 'red';
+                let fips = event.target.parentElement.querySelector('.search-result-fips').innerHTML.trim()
+
+                let county = this.locationSearchCounties.find(county => county.fipsCode == fips)
                 
-                this.totalCases = Math.floor(Math.random() * 1000000)
-                this.deaths = Math.floor(Math.random() * 10000)
-                this.recovered = Math.floor(Math.random() * 100000)
-                this.dailyCases = Math.floor(Math.random() * 1000)
-                
-                this.county = county
+                this.userCounty = county
+                googleMap.setCenter({ lat: county.latitude, lng: county.longitude })
                 this.navigate('home')
             }
         }
     })
 
-    setTimeout(() => {
-        app.county = {
-            name: 'Cook County',
-            state: 'IL'
-        }
-    }, 10000)
+    initCounty()
+
 }
 
-function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
-      });      
+function initMap(lat, lng, limit) {
+    limit = limit || 100
+    if (limit < 1) return
+
+    var elem = document.getElementById('map')
+    if (!elem) {
+        setTimeout(() => initMap(lat, lng, limit - 1), 50)
+        return
+    }
+    
+    window.googleMap = new google.maps.Map(elem, {
+        center: {lat: lat, lng: lng},
+        zoom: 8,
+        gestureHandling: "none",
+        disableDefaultUI: true
+    });      
 }

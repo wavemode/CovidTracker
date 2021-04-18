@@ -7,11 +7,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import java.io.IOException;
 import java.sql.SQLException;
 
-/**
- * Application.main is the starting point of the application. This will connect
- * to the database, initialize table(s) if needed, then start the Spring
- * application.
- */
 @SpringBootApplication
 @EnableScheduling // enable scheduling from the CoronaVirusData
 public class Application {
