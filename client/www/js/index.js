@@ -50,7 +50,7 @@ async function initCounty() {
     } catch (e) {
         console.log(e)
         setTimeout(initCounty, 1000)
-    } 
+    }
 }
 
 function onContentLoaded() {
@@ -149,7 +149,7 @@ function onContentLoaded() {
                 let fips = event.target.parentElement.querySelector('.search-result-fips').innerHTML.trim()
 
                 let county = this.locationSearchCounties.find(county => county.fipsCode == fips)
-                
+
                 this.userCounty = county
                 googleMap.setCenter({ lat: county.latitude, lng: county.longitude })
                 this.navigate('home')
@@ -173,11 +173,90 @@ function initMap(lat, lng, limit) {
         setTimeout(() => initMap(lat, lng, limit - 1), 50)
         return
     }
-    
+
     window.googleMap = new google.maps.Map(elem, {
         center: {lat: lat, lng: lng},
         zoom: 8,
         gestureHandling: "none",
         disableDefaultUI: true
-    });      
+    });
+
+    // packages
+import {BackHandler} from 'react-native';
+/**
+ * Attaches an event listener that handles the android-only hardware
+ * back button
+ * @param  {Function} callback The function to call on click
+ */
+const handleAndroidBackButton = callback => {
+  BackHandler.addEventListener('hardwareBackPress', () => {
+    callback();
+    return true;
+  });
+};
+/**
+ * Removes the event listener in order not to add a new one
+ * every time the view component re-mounts
+ */
+const removeAndroidBackButtonHandler = () => {
+  BackHandler.removeEventListener('hardwareBackPress', () => {});
+}
+export {handleAndroidBackButton, removeAndroidBackButtonHandler};
+
+// packages
+import * as React from 'react';
+// modules
+import {
+  handleAndroidBackButton,
+  removeAndroidBackButtonHandler
+} from './modules/androidBackButton';
+class UserHistory extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  componentDidMount() {
+    handleAndroidBackButton(navigateBack);
+  }
+  componentWillUnmount() {
+    removeAndroidBackButtonHandler();
+  }
+  .
+  .
+  .
+}
+
+// packages
+import {Alert} from 'react-native';
+const exitAlert = () => {
+Alert.alert(
+'Confirm exit',
+'Do you want to quit the app?'
+[
+{text: 'CANCEL', style: 'cancel'},
+{text: 'OK', onPress: () => BackHandler.exitApp()}
+]
+);
+};
+export {exitAlert};
+
+// packages
+import * as React from 'react';
+// modules
+import {
+  handleAndroidBackButton,
+  exitAlert
+} from './modules/androidBackButton';
+class UserHistory extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  componentDidMount() {
+    handleAndroidBackButton(exitAlert);
+  }
+  .
+  .
+  .
+}
 }
