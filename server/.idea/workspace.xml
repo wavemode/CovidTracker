@@ -24,9 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/request/LocationDataRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/request/LocationDataRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/request/PopulationDataRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/request/PopulationDataRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioNumberRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioNumberRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

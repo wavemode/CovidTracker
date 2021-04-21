@@ -46,8 +46,6 @@ public class TwilioSender implements SenderInterface
             // validate phone numbers with -,. or spaces
         }else if (phoneNumber.matches("\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}")) {
             return true;
-        }else if(phoneNumber.matches("/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\\s\\./0-9]*$/g")) {
-            return true;
         }else
             return false;
     }
