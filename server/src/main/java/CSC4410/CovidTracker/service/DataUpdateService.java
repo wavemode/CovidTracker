@@ -17,7 +17,7 @@ import java.sql.SQLException;
 
 @Service
 public class DataUpdateService {
-
+  
     /**
      * Updates all of the county data in the database.
      * @throws IOException
@@ -39,7 +39,7 @@ public class DataUpdateService {
 
     }
 
-    // request and update covid data
+    // request and insert covid data
     public static void updateCovidData() throws SQLException {
         var query = new CovidDataRequest();
         try {
@@ -59,21 +59,23 @@ public class DataUpdateService {
         insert.commit();
     }
 
-    // request and insert county locations
+    // request and update county locations
     public static void updateCountyLocations() throws IOException, SQLException {
         var getLoc = new LocationDataRequest();
         getLoc.execute();
 
         var updateLoc = new LocationUpdateQuery(null);
         updateLoc.begin();
+
         for (CountyLocation location : getLoc.getResults()) {
             updateLoc.setCountyLocation(location);
             updateLoc.execute();
         }
+
         updateLoc.commit();
     }
 
-    // request and insert county populations
+    // request and update county populations
     public static void updateCountyPopulations() throws IOException, SQLException {
         var getPop = new PopulationDataRequest();
         getPop.execute();
@@ -103,8 +105,5 @@ public class DataUpdateService {
     public static void createDataTable() throws SQLException {
       var query=new CountyTableCreateQuery();
       query.execute();
-
-
     }
-
 }
