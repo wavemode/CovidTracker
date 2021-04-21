@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -100,6 +103,22 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CovidDataRequestTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groupone.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
+      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.CovidDataRequestTest" />
+      <option name="METHOD_NAME" value="executeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LocationDataRequestTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="groupone.test" />
       <extension name="coverage">
@@ -111,22 +130,6 @@
       <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
       <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.LocationDataRequestTest" />
       <option name="METHOD_NAME" value="executeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LocationDataRequestTest.getResultsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groupone.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
-      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.LocationDataRequestTest" />
-      <option name="METHOD_NAME" value="getResultsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />

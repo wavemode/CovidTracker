@@ -5,10 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 // receive the data from the user and create a new number
 public class TwilioNumberRequest {
 
-
     private final String number;
     private final String sms;
-
 
     public TwilioNumberRequest(@JsonProperty("number") String number,
                                @JsonProperty("sms") String sms) {
@@ -23,7 +21,6 @@ public class TwilioNumberRequest {
     public String getSms() {
         return sms;
     }
-
 
     @Override
     public String toString() {

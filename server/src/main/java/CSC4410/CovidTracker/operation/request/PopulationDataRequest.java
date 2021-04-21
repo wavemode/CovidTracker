@@ -7,7 +7,9 @@ import org.apache.commons.csv.CSVRecord;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
+/**
+ * A request for population data for all counties in the United States.
+ */
 public class PopulationDataRequest {
     private static final String DATA_FILE = "data/us_county_population.csv";
 
