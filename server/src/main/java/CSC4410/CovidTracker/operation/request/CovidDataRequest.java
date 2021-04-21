@@ -106,9 +106,6 @@ public class CovidDataRequest {
                 results.add(new CountyCovidData(fips, cases, dailyCases, deaths));
 
             }
-
-
         }
     }
-
 }

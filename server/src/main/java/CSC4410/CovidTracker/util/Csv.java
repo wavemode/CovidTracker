@@ -21,10 +21,7 @@ public class Csv {
         for (CSVRecord record : iter) {
             result.add(record);
         }
-
         return result;
     }
-
-
     private Csv() {}
 }

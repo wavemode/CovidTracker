@@ -38,11 +38,15 @@ public class TwilioSender implements SenderInterface
         }
 
     }//check if the phone number entered by the user is valid
-    private boolean isPhoneNumberValid(String phoneNumber) {//have not finished yet
-        return true;
+    public static boolean isPhoneNumberValid(String phoneNumber)
+    {
+        // validate phone numbers with format 1234567890
+        if (phoneNumber.matches("\\d{10}"))
+            return true;
+        // validate phone numbers with -,. or spaces
+        else if (phoneNumber.matches("\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}"))
+            return true;
+        else
+            return false;
     }
-
-
 }
-
-
