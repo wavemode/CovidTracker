@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/www/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/www/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,21 +81,24 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CovidTrackerApplication">
-    <configuration name="CovidDataRequestTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groupone.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
-      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.CovidDataRequestTest" />
-      <option name="METHOD_NAME" value="executeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="server [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="LocationDataRequestTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="groupone.test" />
@@ -167,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.server [jar]" />
         <item itemvalue="JUnit.PopulationDataRequestTest.executeTest" />
         <item itemvalue="JUnit.PopulationDataRequestTest.getResultsTest" />
         <item itemvalue="JUnit.LocationDataRequestTest.executeTest" />
         <item itemvalue="JUnit.LocationDataRequestTest.getResultsTest" />
-        <item itemvalue="JUnit.CovidDataRequestTest.executeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +202,8 @@
       <workItem from="1617830119382" duration="17492000" />
       <workItem from="1618430963657" duration="1409000" />
       <workItem from="1618779885892" duration="752000" />
+      <workItem from="1619021642136" duration="364000" />
+      <workItem from="1619022067329" duration="1297000" />
     </task>
     <servers />
   </component>
@@ -219,6 +227,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="717" y="357" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1618781700297" />
+    <state width="1302" height="267" key="GridCell.Tab.0.bottom" timestamp="1619024764372">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1302" height="267" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619022005073" />
+    <state width="1302" height="267" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1619024764372" />
+    <state width="1302" height="267" key="GridCell.Tab.0.center" timestamp="1619024764371">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1302" height="267" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619022005073" />
+    <state width="1302" height="267" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1619024764371" />
+    <state width="1302" height="267" key="GridCell.Tab.0.left" timestamp="1619024764371">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1302" height="267" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619022005072" />
+    <state width="1302" height="267" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1619024764371" />
+    <state width="1302" height="267" key="GridCell.Tab.0.right" timestamp="1619024764372">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1302" height="267" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619022005073" />
+    <state width="1302" height="267" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1619024764372" />
+    <state width="1302" height="267" key="GridCell.Tab.1.bottom" timestamp="1619024764372">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1302" height="267" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1619024764372" />
+    <state width="1302" height="267" key="GridCell.Tab.1.center" timestamp="1619024764372">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1302" height="267" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1619024764372" />
+    <state width="1302" height="267" key="GridCell.Tab.1.left" timestamp="1619024764372">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1302" height="267" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1619024764372" />
+    <state width="1302" height="267" key="GridCell.Tab.1.right" timestamp="1619024764372">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1302" height="267" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1619024764372" />
     <state x="467" y="141" key="SettingsEditor" timestamp="1618781730809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

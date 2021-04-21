@@ -1,6 +1,7 @@
-const DATA_ENDPOINT = "http://192.168.163.113:8081"
+const DATA_ENDPOINT = "http://35.231.3.11"
 
-// document.addEventListener('deviceready', onDeviceReady, false);
+let readyFlag = false
+// document.addEventListener('deviceready', onContentLoaded, false);
 document.addEventListener('DOMContentLoaded', onContentLoaded, false);
 
 /*
@@ -53,7 +54,85 @@ async function initCounty() {
     }
 }
 
+/*
+    Load contacts from localStorage.
+*/
+function loadContacts() {
+    let contacts = window.localStorage.getItem('contacts')
+    if (contacts)
+        vueApp.contact = JSON.parse(contacts)
+}
+
+
+/*
+    Save contacts to localStorage.
+*/
+function saveContacts() {
+    window.localStorage.setItem('contacts', JSON.stringify(vueApp.contacts))
+}
+
+/*
+    Send an SMS to the given number
+*/
+function sendSMS(number, message) {
+
+    return new Promise(async (resolve, reject) => {
+
+        // requestSMSPermission().catch((err) => {
+        //     alert('Coult not acquire SMS permission: ' + err)
+        // }).then(() => {
+
+            number = '' + number
+            message = '' + message
+            console.log("number=" + number + ", message= " + message);
+
+            //CONFIGURATION
+            var options = {
+                replaceLineBreaks: false, // true to replace \n by a new line, false by default
+                android: {
+                    intent: ''  // send SMS with the native android SMS messaging
+                    //intent: '' // send SMS without opening any other app, require : android.permission.SEND_SMS and android.permission.READ_PHONE_STATE
+                }
+            };
+
+            sms.send(number, message, options, resolve, reject);
+
+        // })
+    })
+}
+
+/**
+ * Check permission to send SMS
+ */
+function checkSMSPermission() {
+    return new Promise((resolve, reject) => {
+        sms.hasPermission(resolve, reject);
+    })
+}
+
+/**
+ * Request permission to send SMS
+ */
+function requestSMSPermission() {
+    return new Promise((resolve, reject) => {
+        let success = (hasPermission) => { 
+            if (!hasPermission) {
+                alert('we dont have permission')
+                sms.requestPermission(resolve, reject)
+            }
+        };
+        alert('checking if has permission')
+        sms.hasPermission(success, reject);
+    })
+
+}
+
 function onContentLoaded() {
+    // if (!readyFlag) {
+    //     readyFlag = true
+    //     return
+    // }
+
     window.vueApp = new Vue({
         el: '#app',
         data: {
@@ -66,13 +145,13 @@ function onContentLoaded() {
             locationSearchCounties: [],
             activePage: 'home',
             warningColor: 'red',
-            contacts: [
-                { name: 'Chukwudi Okechukwu', phone: '123456789', date: '', time: '' }
-            ],
+            contacts: [],
             contactFormName: '',
             contactFormPhone: '',
             contactFormDate: '',
             contactFormTime: '',
+            editContactIndex: -1,
+            tableClass: 'mdl-data-table--selectable',
         },
         methods: {
             commaNumber: function(num) {
@@ -101,19 +180,6 @@ function onContentLoaded() {
                 var elem = document.querySelector('.mdl-layout__obfuscator')
                 if (elem.className.indexOf('is-visible') !== -1)
                     elem.click()
-
-                if (page === 'new-contact') {
-                    let date = new Date()
-                    this.contactFormDate = date.toISOString().split('T')[0]
-                    var h = date.getHours();
-                    var m = date.getMinutes();
-                    var x = h >= 12 ? 'p.m.' : 'a.m.';
-                    h = h % 12;
-                    h = h ? h : 12;
-                    m = m < 10 ? '0'+m: m;
-                    this.contactFormTime = h + ':' + m + ' ' + x;
-
-                }
             },
             warningText() {
                 if (!this.userCounty) return ''
@@ -155,10 +221,58 @@ function onContentLoaded() {
                 this.navigate('home')
             },
             submitContact() {
+                let contact = {
+                    name: this.contactFormName,
+                    phone: this.contactFormPhone,
+                    date: this.contactFormDate,
+                    time: this.contactFormTime
+                }
+                if (this.editContactIndex === -1)
+                    this.contacts.push(contact)
+                else
+                    this.contacts[this.editContactIndex] = contact
+                this.editContactIndex = -1
+                this.contactFormName = ''
+                this.contactFormPhone = ''
+                this.contactFormDate = ''
+                this.contactFormTime = ''
+                this.navigate('contacts')
 
+                saveContacts()
+            },
+            newContact() {
+                let date = new Date()
+                this.contactFormDate = date.toISOString().split('T')[0]
+                var h = date.getHours();
+                var m = date.getMinutes();
+                var x = h >= 12 ? 'p.m.' : 'a.m.';
+                h = h % 12;
+                h = h ? h : 12;
+                m = m < 10 ? '0'+m: m;
+                this.contactFormTime = h + ':' + m + ' ' + x;
+                this.navigate('new-contact')
+            },
+            deleteContact() {
+                let contacts = this.contacts
+                contacts.splice(this.editContactIndex, 1)
+                this.contacts = contacts
+                this.navigate('contacts')
+
+                saveContacts()
+            },
+            editContact(index) {
+                this.editContactIndex = index
+                let contact = this.contacts[index]
+                this.contactFormName = contact.name
+                this.contactFormPhone = contact.phone
+                this.contactFormDate = contact.date
+                this.contactFormTime = contact.time
+                this.navigate('new-contact')
             }
         }
     })
+
+    loadContacts()
 
     initCounty()
 
@@ -180,83 +294,4 @@ function initMap(lat, lng, limit) {
         gestureHandling: "none",
         disableDefaultUI: true
     });
-
-    // packages
-import {BackHandler} from 'react-native';
-/**
- * Attaches an event listener that handles the android-only hardware
- * back button
- * @param  {Function} callback The function to call on click
- */
-const handleAndroidBackButton = callback => {
-  BackHandler.addEventListener('hardwareBackPress', () => {
-    callback();
-    return true;
-  });
-};
-/**
- * Removes the event listener in order not to add a new one
- * every time the view component re-mounts
- */
-const removeAndroidBackButtonHandler = () => {
-  BackHandler.removeEventListener('hardwareBackPress', () => {});
-}
-export {handleAndroidBackButton, removeAndroidBackButtonHandler};
-
-// packages
-import * as React from 'react';
-// modules
-import {
-  handleAndroidBackButton,
-  removeAndroidBackButtonHandler
-} from './modules/androidBackButton';
-class UserHistory extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  componentDidMount() {
-    handleAndroidBackButton(navigateBack);
-  }
-  componentWillUnmount() {
-    removeAndroidBackButtonHandler();
-  }
-  .
-  .
-  .
-}
-
-// packages
-import {Alert} from 'react-native';
-const exitAlert = () => {
-Alert.alert(
-'Confirm exit',
-'Do you want to quit the app?'
-[
-{text: 'CANCEL', style: 'cancel'},
-{text: 'OK', onPress: () => BackHandler.exitApp()}
-]
-);
-};
-export {exitAlert};
-
-// packages
-import * as React from 'react';
-// modules
-import {
-  handleAndroidBackButton,
-  exitAlert
-} from './modules/androidBackButton';
-class UserHistory extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  componentDidMount() {
-    handleAndroidBackButton(exitAlert);
-  }
-  .
-  .
-  .
-}
 }

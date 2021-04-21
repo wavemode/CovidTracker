@@ -88,7 +88,7 @@
 
                 <div id="vue-app-content-new-contact" class="vue-app-content" v-bind:class="{ active: activePage === 'new-contact' }">
 
-                    <form class="new-contact-form" action="#" v-on:click.prevent="submitContact">
+                    <form class="new-contact-form" action="#" v-on:submit.prevent="submitContact">
                         <div class="mdl-textfield mdl-js-textfield">
                             <input class="mdl-textfield__input" type="text" id="sample1" v-model="contactFormName">
                             <label class="mdl-textfield__label" for="sample1">Name</label>
@@ -107,17 +107,25 @@
                             <label class="mdl-textfield__label" for="sample4">Time</label>
                         </div>
                         <br>
-                        <button class="new-contact-form__button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                            Submit
-                        </button>
+                        <div class="form-button-container">
+                            <button v-on:click.prevent="deleteContact" v-if="editContactIndex !== -1" class="new-contact-form__delete-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                Delete
+                            </button>
+                            <button class="new-contact-form__button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                {{ editContactIndex === -1 ? "Submit" : "Update" }}
+                            </button>
+                        </div>
 
                     </form>
+
 
                 </div>
                 
                 <div id="vue-app-content-contacts" class="vue-app-content" v-bind:class="{ active: activePage === 'contacts' }">
 
-                    <table class="contacts-list mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <h6 style="text-align: center; margin-top: 10vw;" v-if="contacts.length === 0">No contacts to display.</h6>
+
+                    <table v-if="contacts.length"  class="mdl-data-table--selectable contacts-list mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                         <thead>
                             <tr>
                             <th class="mdl-data-table__cell--non-numeric">Name</th>
@@ -126,7 +134,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="contact in contacts">
+                            <tr v-for="(contact, index) in contacts" v-on:click.prevent="editContact(index)">
                                 <td class="mdl-data-table__cell--non-numeric">{{ contact.name }}</td>
                                 <td>{{ contact.date }}</td>
                                 <td>{{ contact.time }}</td>
@@ -134,7 +142,7 @@
                         </tbody>
                     </table>                      
 
-                    <button v-on:click="navigate('new-contact')" class="contact-list-new-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                    <button v-on:click.prevent="newContact()" class="contact-list-new-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                         <i class="material-icons">add</i>
                     </button>
 
