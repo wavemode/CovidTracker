@@ -18,7 +18,19 @@
                 <div class="mdl-layout-icon"></div>
                 <div class="mdl-layout__header-row">
                     <span class="mdl-layout__title">{{ title }}</span>
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Right aligned menu below button -->
+                    <button v-bind:style="(contacts.length && activePage === 'contacts') ? '' : 'display: none;'" id="demo-menu-lower-right"
+                            class="mdl-button mdl-js-button mdl-button--icon">
+                      <i class="material-icons">more_vert</i>
+                    </button>
+
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                        for="demo-menu-lower-right">
+                      <li v-on:click="alertContacts" class="mdl-menu__item">Alert Contacts</li>
+                    </ul>
                 </div>
+
             </header>
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout__title"></span>
@@ -88,7 +100,7 @@
 
                 <div id="vue-app-content-new-contact" class="vue-app-content" v-bind:class="{ active: activePage === 'new-contact' }">
 
-                    <form class="new-contact-form" action="#" v-on:click.prevent="submitContact">
+                    <form class="new-contact-form" action="#" v-on:submit.prevent="submitContact">
                         <div class="mdl-textfield mdl-js-textfield">
                             <input class="mdl-textfield__input" type="text" id="sample1" v-model="contactFormName">
                             <label class="mdl-textfield__label" for="sample1">Name</label>
@@ -107,34 +119,48 @@
                             <label class="mdl-textfield__label" for="sample4">Time</label>
                         </div>
                         <br>
-                        <button class="new-contact-form__button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                            Submit
-                        </button>
+                        <div class="form-button-container">
+                            <button v-on:click.prevent="deleteContact" v-if="editContactIndex !== -1" class="new-contact-form__delete-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                Delete
+                            </button>
+                            <button class="new-contact-form__button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                {{ editContactIndex === -1 ? "Submit" : "Update" }}
+                            </button>
+                        </div>
 
                     </form>
+
 
                 </div>
                 
                 <div id="vue-app-content-contacts" class="vue-app-content" v-bind:class="{ active: activePage === 'contacts' }">
 
-                    <table class="contacts-list mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <h6 style="text-align: center; margin-top: 10vw;" v-if="contacts.length === 0">No contacts to display.</h6>
+
+                    <table v-bind:style="contacts.length ? '' : 'display: none;'" class="contacts-list mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                         <thead>
                             <tr>
-                            <th class="mdl-data-table__cell--non-numeric">Name</th>
-                            <th>Date</th>
-                            <th>Time</th>
+                                <th><input v-bind:style="alertingContacts ? '' : 'display: none;'" class="alert-contact-check" type="checkbox"></th>
+                                <th class="mdl-data-table__cell--non-numeric">Name</th>
+                                <th>Date</th>
+                                <th>Time</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="contact in contacts">
-                                <td class="mdl-data-table__cell--non-numeric">{{ contact.name }}</td>
-                                <td>{{ contact.date }}</td>
-                                <td>{{ contact.time }}</td>
+                            <tr class="contact-row" v-for="(contact, index) in contacts">
+                                <td><input v-bind:style="alertingContacts ? '' : 'display: none;'" class="alert-contact-check" type="checkbox" v-bind:value="contact.phone"></td>
+                                <td v-on:click.prevent="editContact(index)" class="mdl-data-table__cell--non-numeric">{{ contact.name }}</td>
+                                <td v-on:click.prevent="editContact(index)">{{ contact.date }}</td>
+                                <td v-on:click.prevent="editContact(index)">{{ contact.time }}</td>
                             </tr>
                         </tbody>
-                    </table>                      
+                    </table>    
 
-                    <button v-on:click="navigate('new-contact')" class="contact-list-new-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                    <button v-bind:style="alertingContacts ? '' : 'display: none;'" v-on:click.prevent="sendAlerts()" class="contact-list-alert-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                      Send
+                    </button>
+
+                    <button v-on:click.prevent="newContact()" class="contact-list-new-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                         <i class="material-icons">add</i>
                     </button>
 

@@ -2,10 +2,15 @@ plugins {
     id 'org.springframework.boot' version '2.4.2'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'application'
 }
 
 group = 'CSC4410.CovidTracker'
 version = '0.0.1-SNAPSHOT'
+
+application {
+    mainClass = 'CSC4410.CovidTracker.Application'
+}
 
 repositories {
     mavenCentral()
@@ -30,4 +35,21 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+jar {
+    from(configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }) {
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+    }
+
+    manifest {
+        attributes 'Implementation-Title': 'CovidTracker',
+                'Implementation-Version': version,
+                'Built-By': System.getProperty('user.name'),
+                'Built-Date': new Date(),
+                'Built-JDK': System.getProperty('java.version'),
+                'Main-Class': 'CSC4410.CovidTracker.Application'
+    }
 }

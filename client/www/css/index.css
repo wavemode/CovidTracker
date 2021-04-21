@@ -45,6 +45,7 @@ body {
     left: 0;
 }
 
+
 .mdl-layout__title {
     font-weight: 300;
 }
@@ -56,6 +57,10 @@ body {
     padding-top: 12vw;
 
     color: rgb(117, 117, 117);
+}
+
+#demo-menu-lower-right {
+    float: right;
 }
 
 .county {
@@ -93,6 +98,9 @@ body {
 
 .county__status.red {
     background: rgb(233, 30, 99);
+}
+.county__status.orange {
+    background: rgb(255, 87, 34);
 }
 .county__status.yellow {
     background: rgb(255, 160, 0);
@@ -179,6 +187,13 @@ body {
     right: 8vw;
 }
 
+.contact-list-alert-button {
+    position: fixed;
+
+    bottom: 8vw;
+    left: 8vw;
+}
+
 #vue-app-content-new-contact {
     padding: 14vw 0;
 }
@@ -187,6 +202,18 @@ body {
     text-align: center;
 }
 
-.new-contact-form__button {
+.form-button-container {
     margin-top: 10vw;
+
+    text-align: center;
+}
+
+.new-contact-form__button {
+    display: inline-block;
+}
+
+.new-contact-form__delete-button {
+    display: inline-block;
+
+    margin-right: 4vw;
 }
