@@ -23,6 +23,7 @@ Throughout the project the group kept in touch through group chats consistently.
 - We talked about the functional requirements we need to make this project.
 
 - Each of us were given 5 requirements to make an SRS diagram for.
+- Recording: https://wayne-edu.zoom.us/rec/play/HK5MFGV3MYDteZOP7AzZNKGgWU-0gEUfcQw6sf1xBTsLqnHPaRuRLUs-_ZuSMu8Rt0mN1z_31UKuWmZ2.r7U-cC9wOYDilPuL?autoplay=true&startTime=1612228341000
 
 ### 2/07/2021
 
@@ -37,6 +38,7 @@ No meeting.
 - We discussed putting the data into a database.
 
 - Brainstormed potential features to add to the server.
+- Recording: https://wayne-edu.zoom.us/rec/play/z7u1yeq6RV1QL-wD_C2JSGaWmrISaJpeV62DTgklOEAL1K72Q-cwp_kKdd2ngCZQcRcoX-IK0Sdqr6ed.1mqax5h4IaVu5_S3?autoplay=true&startTime=1613524670000
 
 ### 2/28/2021
 
@@ -52,6 +54,8 @@ No meeting.
 
 - Discussed moving forward with next steps in the project.
 
+- Recording: https://wayne-edu.zoom.us/rec/play/kW8adGuJDajUZRm0m36PUTCI_iX4Fb3N0tOB_99z34a0AeGA5xfwU7mRxctJFm61j9G4QDOGEg1msbof.7W3vV5YtM0iniVgC?startTime=1615424516000&_x_zm_rtaid=OzPjN7UoRxiotYEaAYW4KA.1618953110739.aa9d3f099b6e7c7669c3dd50aea2564f&_x_zm_rhtaid=160
+
 ### 4/4/2021
 
 - We discussed twilio  implementation for the mobile messages
@@ -61,6 +65,8 @@ No meeting.
 - Talked about building an apk for easy installation since we’re using android.
 
 - Discussed planning to conduct our unit tests.
+- Recording: https://wayne-edu.zoom.us/rec/play/FAbRY93BEmKOcwDhnclf8vGtZBboNdzaGIkJ-1-tUdrAb_XZok2g1h6ykRrzTyzDkEm745ABWxIWJHtg.MGfdkTG7m_JRjAzG?continueMode=true
+
 
 ### 4/7/21
 
