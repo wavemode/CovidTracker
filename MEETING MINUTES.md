@@ -1,6 +1,5 @@
-Meeting summary:
+### Meeting summary:
                Throughout the project the group kept in touch through group chats consistently. We set up zoom meetings consistently throughout the semester and aimed for at least one per week and tried to work around everyone’s availability as much as we could. Throughout each meeting we discussed what had been done, what needed to be done, and helped each other with any uncertainties as much as we could. Meetings were always at least an hour long with extra time being added depending on the issue a group member was working on.
-Meeting Dates:
 
 ### 1/20/2021
 
