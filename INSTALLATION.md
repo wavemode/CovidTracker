@@ -27,7 +27,7 @@ Visit the [releases page](https://github.com/WSU-4110/CovidTracker/releases) to 
 ### Steps
 
 1. `cd /path/to/CovidTracker/server/`
-2. `./gradlew run`
+2. `./gradlew run` (or `./gradlew.bat run` on Windows/DOS)
 
 ## F.A.Q. (Frequently Asked Questions)
 
