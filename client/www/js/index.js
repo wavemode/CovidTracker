@@ -1,4 +1,7 @@
 const DATA_ENDPOINT = "http://35.231.3.11"
+const COVID_ALERT = "This is an automated text from CovidTracker. You are receiving " +
+                    "this message because this user tested positive for Covid-19. You should " +
+                    "get tested as well at your earliest convenience."
 
 let readyFlag = false
 // document.addEventListener('deviceready', onContentLoaded, false);
@@ -151,6 +154,7 @@ function onContentLoaded() {
             contactFormDate: '',
             contactFormTime: '',
             editContactIndex: -1,
+            alertingContacts: false,
             tableClass: 'mdl-data-table--selectable',
         },
         methods: {
@@ -173,6 +177,7 @@ function onContentLoaded() {
                 return result
             },
             navigate: function(page, event) {
+                this.alertingContacts = false
                 if (event) {
                     this.title = event.target.innerHTML.trim()
                 }
@@ -250,6 +255,10 @@ function onContentLoaded() {
                 h = h ? h : 12;
                 m = m < 10 ? '0'+m: m;
                 this.contactFormTime = h + ':' + m + ' ' + x;
+                this.editContactIndex = -1
+
+                this.contactFormName = ''
+                this.contactFormPhone = ''
                 this.navigate('new-contact')
             },
             deleteContact() {
@@ -268,6 +277,24 @@ function onContentLoaded() {
                 this.contactFormDate = contact.date
                 this.contactFormTime = contact.time
                 this.navigate('new-contact')
+            },
+            alertContacts() {
+                this.alertingContacts = true
+            },
+            sendAlerts() {
+                if (confirm('Send an alert to these contacts?')) {
+
+                    let elements = document.querySelectorAll('.congit atact-row input:checked')
+
+                    elements.forEach(elem => {
+                        
+                        sendSMS(elem.value, COVID_ALERT)
+
+                    })
+
+                }
+                
+                this.alertingContacts = false
             }
         }
     })

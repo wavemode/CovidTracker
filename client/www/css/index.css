@@ -45,6 +45,7 @@ body {
     left: 0;
 }
 
+
 .mdl-layout__title {
     font-weight: 300;
 }
@@ -56,6 +57,10 @@ body {
     padding-top: 12vw;
 
     color: rgb(117, 117, 117);
+}
+
+#demo-menu-lower-right {
+    float: right;
 }
 
 .county {
@@ -180,6 +185,13 @@ body {
 
     bottom: 8vw;
     right: 8vw;
+}
+
+.contact-list-alert-button {
+    position: fixed;
+
+    bottom: 8vw;
+    left: 8vw;
 }
 
 #vue-app-content-new-contact {
