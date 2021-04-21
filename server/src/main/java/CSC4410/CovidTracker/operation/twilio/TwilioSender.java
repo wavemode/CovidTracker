@@ -41,12 +41,14 @@ public class TwilioSender implements SenderInterface
     public static boolean isPhoneNumberValid(String phoneNumber)
     {
         // validate phone numbers with format 1234567890
-        if (phoneNumber.matches("\\d{10}"))
+        if (phoneNumber.matches("\\d{10}")) {
             return true;
-        // validate phone numbers with -,. or spaces
-        else if (phoneNumber.matches("\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}"))
+            // validate phone numbers with -,. or spaces
+        }else if (phoneNumber.matches("\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}")) {
             return true;
-        else
+        }else if(phoneNumber.matches("/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\\s\\./0-9]*$/g")) {
+            return true;
+        }else
             return false;
     }
 }

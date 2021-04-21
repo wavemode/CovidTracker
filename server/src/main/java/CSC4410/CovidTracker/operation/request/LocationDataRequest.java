@@ -8,7 +8,10 @@ import org.apache.commons.csv.CSVRecord;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
+/**
+ * A request for all coordinate location data in the United States.
+ * Retrieves the fips code, longitude and latitude of each county.
+ */
 public class LocationDataRequest {
     private static final String DATA_FILE = "data/us_county_coordinates.csv";
 

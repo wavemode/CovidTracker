@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,8 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/www/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/request/LocationDataRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/request/LocationDataRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/request/PopulationDataRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/request/PopulationDataRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioNumberRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioNumberRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSC4410/CovidTracker/operation/twilio/TwilioSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +83,20 @@
       <recent name="C:\Users\moham\CovidTracker\server" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CovidTrackerApplication">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.Application" />
+      <module name="groupone.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CovidDataRequestTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="groupone.test" />
       <extension name="coverage">
@@ -105,22 +124,6 @@
       <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
       <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.LocationDataRequestTest" />
       <option name="METHOD_NAME" value="executeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LocationDataRequestTest.getResultsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groupone.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
-      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.LocationDataRequestTest" />
-      <option name="METHOD_NAME" value="getResultsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.CovidDataRequestTest.executeTest" />
         <item itemvalue="JUnit.PopulationDataRequestTest.executeTest" />
         <item itemvalue="JUnit.PopulationDataRequestTest.getResultsTest" />
         <item itemvalue="JUnit.LocationDataRequestTest.executeTest" />
-        <item itemvalue="JUnit.LocationDataRequestTest.getResultsTest" />
-        <item itemvalue="JUnit.CovidDataRequestTest.executeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -213,16 +216,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="717" y="357" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1618781700297">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="717" y="357" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1618781700297" />
-    <state x="467" y="141" key="SettingsEditor" timestamp="1618781730809">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="467" y="141" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1618781730809" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/groupone$CovidTrackerApplicationTests.ic" NAME="CovidTrackerApplicationTests Coverage Results" MODIFIED="1617837069709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
