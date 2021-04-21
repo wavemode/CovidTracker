@@ -1,7 +1,7 @@
 const DATA_ENDPOINT = "http://35.231.3.11"
 const COVID_ALERT = "This is an automated text from CovidTracker. You are receiving " +
                     "this message because this user tested positive for Covid-19. You should " +
-                    "get tested as well at your earliest convenience."
+                    "get tested at your earliest convenience."
 
 let readyFlag = false
 // document.addEventListener('deviceready', onContentLoaded, false);
@@ -63,7 +63,8 @@ async function initCounty() {
 function loadContacts() {
     let contacts = window.localStorage.getItem('contacts')
     if (contacts)
-        vueApp.contact = JSON.parse(contacts)
+        vueApp.contacts = JSON.parse(contacts)
+    
 }
 
 
@@ -79,7 +80,7 @@ function saveContacts() {
 */
 function sendSMS(number, message) {
 
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
 
         // requestSMSPermission().catch((err) => {
         //     alert('Coult not acquire SMS permission: ' + err)
@@ -284,11 +285,13 @@ function onContentLoaded() {
             sendAlerts() {
                 if (confirm('Send an alert to these contacts?')) {
 
-                    let elements = document.querySelectorAll('.congit atact-row input:checked')
+                    let elements = document.querySelectorAll('.contact-row input:checked')
 
                     elements.forEach(elem => {
                         
-                        sendSMS(elem.value, COVID_ALERT)
+                        sendSMS(elem.value, COVID_ALERT).catch(console.error).then(() => {
+                            console.log('succeeded')
+                        })
 
                     })
 
