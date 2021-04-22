@@ -24,7 +24,7 @@ public class Database {
      * @throws SQLException
      */
     public static Connection getConnection() throws SQLException {
-        if (connection == null) {
+        if (connection == null || connection.isClosed()) {
             initConnection();
         }
 

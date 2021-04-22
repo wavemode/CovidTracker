@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -22,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/www/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="f13e1d6f-ce00-4323-8a50-5f6665510119" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,22 +94,6 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CovidDataRequestTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groupone.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
-      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.CovidDataRequestTest" />
-      <option name="METHOD_NAME" value="executeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LocationDataRequestTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="groupone.test" />
       <extension name="coverage">
@@ -130,6 +105,22 @@
       <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
       <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.LocationDataRequestTest" />
       <option name="METHOD_NAME" value="executeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocationDataRequestTest.getResultsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groupone.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CSC4410.CovidTracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CSC4410.CovidTracker" />
+      <option name="MAIN_CLASS_NAME" value="CSC4410.CovidTracker.LocationDataRequestTest" />
+      <option name="METHOD_NAME" value="getResultsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -207,6 +198,7 @@
       <workItem from="1618779885892" duration="752000" />
       <workItem from="1619021642136" duration="364000" />
       <workItem from="1619022067329" duration="1297000" />
+      <workItem from="1619113210565" duration="32000" />
     </task>
     <servers />
   </component>

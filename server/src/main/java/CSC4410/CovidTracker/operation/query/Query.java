@@ -18,7 +18,7 @@ public abstract class Query {
      * @throws SQLException
      */
     protected PreparedStatement getStatement() throws SQLException {
-        if (stmt == null) {
+        if (stmt == null || stmt.isClosed()) {
             stmt = Database.getConnection().prepareStatement(getStatementBody());
         }
 
