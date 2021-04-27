@@ -11,4 +11,5 @@ services:
 script:
   - cd server
   - cp config.example.json config.json
+  - chmod +x gradlew
   - ./gradlew test
