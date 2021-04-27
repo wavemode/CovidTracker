@@ -1,0 +1,14 @@
+language: java
+install: skip
+
+os: linux
+dist: trusty
+jdk: oraclejdk11
+
+services:
+  - mysql
+
+script:
+  - cd server
+  - cp config.example.json config.json
+  - ./gradlew test
